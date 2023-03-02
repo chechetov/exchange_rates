@@ -1,27 +1,8 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark"> 
-
-  <%= link_to 'Exchange App', root_path, class: "navbar-brand" %>
-
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Get rates <span class="sr-only">(current)</span></a>
-      </li>
-
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Past rates</a>
-      </li>
-
-      <li class="nav-item active">
-      <%= link_to 'About', home_about_path, class: "nav-link" %>
-      </li>
-
-    </ul>
-
-  </div>
-</nav>
+<header class="navbar navbar-dark sticky-top bg-blue-mine flex-md-nowrap p-0 shadow fullwidth">
+    <%= link_to root_path, class: "navbar-brand col-md-3 col-lg-2 me-0 fs-6 pad3px-left" do %>
+    <%= image_tag 'logo.png' %>
+    <% end %>
+    <button class="navbar-toggler d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+</header>

@@ -12,5 +12,8 @@
  *
  *= require_tree .
  *= require_self
- *= require bootstrap.min
+ *= require bootstrap
+ *= require bootstrap-datepicker
+ *= require mystyle
+ *= require currency-flags
  */

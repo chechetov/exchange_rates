@@ -1,0 +1,56 @@
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pad3px-top mb-3 border-bottom" data-controller="datepicker">
+  <h4 class="h4">Convert</h4>
+</div>
+
+<div class="card shadow p-3 mb-5 bg-white rounded">
+  <div class="card-body centering">
+    <%= form_with scope: "params", url: rates_convert_amount_url, local: true, data: { turbo: false }, method: :post do |form| %>
+    
+    <div class="seriesbody" >
+
+      <div class="seriesbodydiv1">
+        <%= form.number_field :amount, step: 0.5, type:'text', 'id':'input_field','inputmode':'decimal', class:"form-control", placeholder: "100", value: 100 %>
+        <%= form.text_field :date, class: "form-control mydatepicker", placeholder: "Today", 'data-provide':"datepicker", 'id':'mydatepicker' %>
+        <div class="input-group-addon" id="datepicker-container">
+          <span class="glyphicon glyphicon-th"></span>
+        </div>
+      </div>
+
+      <div class="seriesbodydiv2">
+        <div class="nopadding dropdown form-group w-40">        
+                <button class="btn" type="button" id="dropdownMenuButton">
+                  From
+                </button>
+                <%= form.hidden_field :from %>
+                <button type="button" class="nopadding btn dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                </button>
+                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="currencySelectButton">
+                      <% @currencies.each do |currency| %>
+                        <%= content_tag(:li, content_tag(:div, content_tag(:div, currency["desc"], options={'class':'div1'}) + content_tag(:div, currency["code"], options={'class':'div2 currency-flag currency-flag-'+currency["code"].downcase, 'id':'currency-from'}), options={'class':'parent dropdown-item'}))%>
+                      <% end %>
+                </ul>
+              </div>
+
+              <div class="nopadding dropdown form-group w-40">
+                <button class="btn" type="button" id="dropdownMenuButton">
+                  To
+                </button>
+                <%= form.hidden_field :to %>
+                <button type="button" class="nopadding btn dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                </button>
+                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="currencySelectButton">
+                      <% @currencies.each do |currency| %>
+                        <%= content_tag(:li, content_tag(:div, content_tag(:div, currency["desc"], options={'class':'div1'}) + content_tag(:div, currency["code"], options={'class':'div2 currency-flag currency-flag-'+currency["code"].downcase}), options={'class':'parent dropdown-item'}))%>
+                      <% end %>
+                </ul>
+        </div>
+      </div>
+    
+      <div class="seriesbodydiv3  pad8px-top">
+      <%= form.submit "Convert", class:"btn btn-light btnhover" %>
+      </div>
+    </div>
+    <% end %>
+  </div>
+</div>
+</div>

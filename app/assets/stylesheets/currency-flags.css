@@ -1,0 +1,1214 @@
+.currency-flag {
+  color: transparent;
+  display: inline-block;
+  width: 24px;
+  height: 16px;
+  background-size: cover;
+  background-image: url("/assets/rectangle_fallback.png");
+}
+
+.np-theme-personal .currency-flag {
+  height: 24px;
+  background-image: url("/assets/wise.svg");
+}
+
+.currency-flag-sm {
+  width: 16px;
+  height: 10px;
+}
+
+.np-theme-personal .currency-flag-sm {
+  height: 16px;
+}
+
+.currency-flag-lg {
+  width: 36px;
+  height: 24px;
+}
+
+.np-theme-personal .currency-flag-lg {
+  height: 36px;
+}
+
+.currency-flag-xl {
+  width: 48px;
+  height: 32px;
+}
+
+.np-theme-personal .currency-flag-xl {
+  height: 48px;
+}
+
+.dropdown-menu{
+/*width:200px;
+  padding:2px; */
+  width: 340px;
+  height: 150px;
+  overflow: auto;
+}
+
+#dropdownMenuButton1{
+  /* width: 150px; */
+}
+
+.btn-check:checked + .btn, :not(.btn-check) + .btn:active, .btn:first-child:active, .btn.active, .btn.show{
+
+}
+
+.parent {
+display: grid;
+grid-column-gap: 20px;
+grid-row-gap: 1px;
+  text-align: left,
+}
+
+.div1 { 
+  text-align: left,
+  grid-area: 1 / 1 / 2 / 3; 
+}
+
+.div2 {
+  display:none;
+  font-size: 0; 
+  color: transparent;
+  /*margin-right: 5px;*/
+  margin-left: auto;
+  grid-area: 1 / 2 / 2 / 3; 
+} 
+
+.currency-flag.currency-flag-aed {
+  background-image: url("/assets/aed.png");
+}
+.currency-flag.currency-flag-afn {
+  background-image: url("/assets/afn.png");
+}
+.currency-flag.currency-flag-all {
+  background-image: url("/assets/all.png");
+}
+.currency-flag.currency-flag-amd {
+  background-image: url("/assets/amd.png");
+}
+.currency-flag.currency-flag-ang {
+  background-image: url("/assets/ang.png");
+}
+.currency-flag.currency-flag-aoa {
+  background-image: url("/assets/aoa.png");
+}
+.currency-flag.currency-flag-ars {
+  background-image: url("/assets/ars.png");
+}
+.currency-flag.currency-flag-aud {
+  background-image: url("/assets/aud.png");
+}
+.currency-flag.currency-flag-awg {
+  background-image: url("/assets/awg.png");
+}
+.currency-flag.currency-flag-azn {
+  background-image: url("/assets/azn.png");
+}
+.currency-flag.currency-flag-bam {
+  background-image: url("/assets/bam.png");
+}
+.currency-flag.currency-flag-bbd {
+  background-image: url("/assets/bbd.png");
+}
+.currency-flag.currency-flag-bdt {
+  background-image: url("/assets/bdt.png");
+}
+.currency-flag.currency-flag-bgn {
+  background-image: url("/assets/bgn.png");
+}
+.currency-flag.currency-flag-bhd {
+  background-image: url("/assets/bhd.png");
+}
+.currency-flag.currency-flag-bif {
+  background-image: url("/assets/bif.png");
+}
+.currency-flag.currency-flag-bmd {
+  background-image: url("/assets/bmd.png");
+}
+.currency-flag.currency-flag-bnd {
+  background-image: url("/assets/bnd.png");
+}
+.currency-flag.currency-flag-bob {
+  background-image: url("/assets/bob.png");
+}
+.currency-flag.currency-flag-brl {
+  background-image: url("/assets/brl.png");
+}
+.currency-flag.currency-flag-bsd {
+  background-image: url("/assets/bsd.png");
+}
+.currency-flag.currency-flag-btn {
+  background-image: url("/assets/btn.png");
+}
+.currency-flag.currency-flag-bwp {
+  background-image: url("/assets/bwp.png");
+}
+.currency-flag.currency-flag-byn {
+  background-image: url("/assets/byn.png");
+}
+.currency-flag.currency-flag-bzd {
+  background-image: url("/assets/bzd.png");
+}
+.currency-flag.currency-flag-cad {
+  background-image: url("/assets/cad.png");
+}
+.currency-flag.currency-flag-cdf {
+  background-image: url("/assets/cdf.png");
+}
+.currency-flag.currency-flag-chf {
+  background-image: url("/assets/chf.png");
+}
+.currency-flag.currency-flag-clp {
+  background-image: url("/assets/clp.png");
+}
+.currency-flag.currency-flag-cny {
+  background-image: url("/assets/cny.png");
+}
+.currency-flag.currency-flag-cop {
+  background-image: url("/assets/cop.png");
+}
+.currency-flag.currency-flag-crc {
+  background-image: url("/assets/crc.png");
+}
+.currency-flag.currency-flag-cup {
+  background-image: url("/assets/cup.png");
+}
+.currency-flag.currency-flag-cve {
+  background-image: url("/assets/cve.png");
+}
+.currency-flag.currency-flag-czk {
+  background-image: url("/assets/czk.png");
+}
+.currency-flag.currency-flag-djf {
+  background-image: url("/assets/djf.png");
+}
+.currency-flag.currency-flag-dkk {
+  background-image: url("/assets/dkk.png");
+}
+.currency-flag.currency-flag-dop {
+  background-image: url("/assets/dop.png");
+}
+.currency-flag.currency-flag-dzd {
+  background-image: url("/assets/dzd.png");
+}
+.currency-flag.currency-flag-egp {
+  background-image: url("/assets/egp.png");
+}
+.currency-flag.currency-flag-ern {
+  background-image: url("/assets/ern.png");
+}
+.currency-flag.currency-flag-etb {
+  background-image: url("/assets/etb.png");
+}
+.currency-flag.currency-flag-eur {
+  background-image: url("/assets/eur.png");
+}
+.currency-flag.currency-flag-fjd {
+  background-image: url("/assets/fjd.png");
+}
+.currency-flag.currency-flag-fkp {
+  background-image: url("/assets/fkp.png");
+}
+.currency-flag.currency-flag-gbp {
+  background-image: url("/assets/gbp.png");
+}
+.currency-flag.currency-flag-gel {
+  background-image: url("/assets/gel.png");
+}
+.currency-flag.currency-flag-ggp {
+  background-image: url("/assets/ggp.png");
+}
+.currency-flag.currency-flag-ghs {
+  background-image: url("/assets/ghs.png");
+}
+.currency-flag.currency-flag-gip {
+  background-image: url("/assets/gip.png");
+}
+.currency-flag.currency-flag-gmd {
+  background-image: url("/assets/gmd.png");
+}
+.currency-flag.currency-flag-gnf {
+  background-image: url("/assets/gnf.png");
+}
+.currency-flag.currency-flag-gtq {
+  background-image: url("/assets/gtq.png");
+}
+.currency-flag.currency-flag-gyd {
+  background-image: url("/assets/gyd.png");
+}
+.currency-flag.currency-flag-hkd {
+  background-image: url("/assets/hkd.png");
+}
+.currency-flag.currency-flag-hnl {
+  background-image: url("/assets/hnl.png");
+}
+.currency-flag.currency-flag-hrk {
+  background-image: url("/assets/hrk.png");
+}
+.currency-flag.currency-flag-htg {
+  background-image: url("/assets/htg.png");
+}
+.currency-flag.currency-flag-huf {
+  background-image: url("/assets/huf.png");
+}
+.currency-flag.currency-flag-idr {
+  background-image: url("/assets/idr.png");
+}
+.currency-flag.currency-flag-ils {
+  background-image: url("/assets/ils.png");
+}
+.currency-flag.currency-flag-imp {
+  background-image: url("/assets/imp.png");
+}
+.currency-flag.currency-flag-inr {
+  background-image: url("/assets/inr.png");
+}
+.currency-flag.currency-flag-iqd {
+  background-image: url("/assets/iqd.png");
+}
+.currency-flag.currency-flag-irr {
+  background-image: url("/assets/irr.png");
+}
+.currency-flag.currency-flag-isk {
+  background-image: url("/assets/isk.png");
+}
+.currency-flag.currency-flag-jep {
+  background-image: url("/assets/jep.png");
+}
+.currency-flag.currency-flag-jmd {
+  background-image: url("/assets/jmd.png");
+}
+.currency-flag.currency-flag-jod {
+  background-image: url("/assets/jod.png");
+}
+.currency-flag.currency-flag-jpy {
+  background-image: url("/assets/jpy.png");
+}
+.currency-flag.currency-flag-kes {
+  background-image: url("/assets/kes.png");
+}
+.currency-flag.currency-flag-kgs {
+  background-image: url("/assets/kgs.png");
+}
+.currency-flag.currency-flag-khr {
+  background-image: url("/assets/khr.png");
+}
+.currency-flag.currency-flag-kmf {
+  background-image: url("/assets/kmf.png");
+}
+.currency-flag.currency-flag-kpw {
+  background-image: url("/assets/kpw.png");
+}
+.currency-flag.currency-flag-krw {
+  background-image: url("/assets/krw.png");
+}
+.currency-flag.currency-flag-kwd {
+  background-image: url("/assets/kwd.png");
+}
+.currency-flag.currency-flag-kyd {
+  background-image: url("/assets/kyd.png");
+}
+.currency-flag.currency-flag-kzt {
+  background-image: url("/assets/kzt.png");
+}
+.currency-flag.currency-flag-lak {
+  background-image: url("/assets/lak.png");
+}
+.currency-flag.currency-flag-lbp {
+  background-image: url("/assets/lbp.png");
+}
+.currency-flag.currency-flag-lkr {
+  background-image: url("/assets/lkr.png");
+}
+.currency-flag.currency-flag-lrd {
+  background-image: url("/assets/lrd.png");
+}
+.currency-flag.currency-flag-lsl {
+  background-image: url("/assets/lsl.png");
+}
+.currency-flag.currency-flag-ltl {
+  background-image: url("/assets/ltl.png");
+}
+.currency-flag.currency-flag-lyd {
+  background-image: url("/assets/lyd.png");
+}
+.currency-flag.currency-flag-mad {
+  background-image: url("/assets/mad.png");
+}
+.currency-flag.currency-flag-mdl {
+  background-image: url("/assets/mdl.png");
+}
+.currency-flag.currency-flag-mga {
+  background-image: url("/assets/mga.png");
+}
+.currency-flag.currency-flag-mkd {
+  background-image: url("/assets/mkd.png");
+}
+.currency-flag.currency-flag-mmk {
+  background-image: url("/assets/mmk.png");
+}
+.currency-flag.currency-flag-mnt {
+  background-image: url("/assets/mnt.png");
+}
+.currency-flag.currency-flag-mop {
+  background-image: url("/assets/mop.png");
+}
+.currency-flag.currency-flag-mro {
+  background-image: url("/assets/mro.png");
+}
+.currency-flag.currency-flag-mur {
+  background-image: url("/assets/mur.png");
+}
+.currency-flag.currency-flag-mvr {
+  background-image: url("/assets/mvr.png");
+}
+.currency-flag.currency-flag-mwk {
+  background-image: url("/assets/mwk.png");
+}
+.currency-flag.currency-flag-mxn {
+  background-image: url("/assets/mxn.png");
+}
+.currency-flag.currency-flag-myr {
+  background-image: url("/assets/myr.png");
+}
+.currency-flag.currency-flag-mzn {
+  background-image: url("/assets/mzn.png");
+}
+.currency-flag.currency-flag-nad {
+  background-image: url("/assets/nad.png");
+}
+.currency-flag.currency-flag-ngn {
+  background-image: url("/assets/ngn.png");
+}
+.currency-flag.currency-flag-nio {
+  background-image: url("/assets/nio.png");
+}
+.currency-flag.currency-flag-nok {
+  background-image: url("/assets/nok.png");
+}
+.currency-flag.currency-flag-npr {
+  background-image: url("/assets/npr.png");
+}
+.currency-flag.currency-flag-nzd {
+  background-image: url("/assets/nzd.png");
+}
+.currency-flag.currency-flag-omr {
+  background-image: url("/assets/omr.png");
+}
+.currency-flag.currency-flag-pab {
+  background-image: url("/assets/pab.png");
+}
+.currency-flag.currency-flag-pen {
+  background-image: url("/assets/pen.png");
+}
+.currency-flag.currency-flag-pgk {
+  background-image: url("/assets/pgk.png");
+}
+.currency-flag.currency-flag-php {
+  background-image: url("/assets/php.png");
+}
+.currency-flag.currency-flag-pkr {
+  background-image: url("/assets/pkr.png");
+}
+.currency-flag.currency-flag-pln {
+  background-image: url("/assets/pln.png");
+}
+.currency-flag.currency-flag-pyg {
+  background-image: url("/assets/pyg.png");
+}
+.currency-flag.currency-flag-qar {
+  background-image: url("/assets/qar.png");
+}
+.currency-flag.currency-flag-ron {
+  background-image: url("/assets/ron.png");
+}
+.currency-flag.currency-flag-rsd {
+  background-image: url("/assets/rsd.png");
+}
+.currency-flag.currency-flag-rub {
+  background-image: url("/assets/rub.png");
+}
+.currency-flag.currency-flag-rwf {
+  background-image: url("/assets/rwf.png");
+}
+.currency-flag.currency-flag-sar {
+  background-image: url("/assets/sar.png");
+}
+.currency-flag.currency-flag-sbd {
+  background-image: url("/assets/sbd.png");
+}
+.currency-flag.currency-flag-scr {
+  background-image: url("/assets/scr.png");
+}
+.currency-flag.currency-flag-sek {
+  background-image: url("/assets/sek.png");
+}
+.currency-flag.currency-flag-sgd {
+  background-image: url("/assets/sgd.png");
+}
+.currency-flag.currency-flag-shp {
+  background-image: url("/assets/shp.png");
+}
+.currency-flag.currency-flag-sll {
+  background-image: url("/assets/sll.png");
+}
+.currency-flag.currency-flag-sle {
+  background-image: url("/assets/sll.png");
+}
+.currency-flag.currency-flag-sos {
+  background-image: url("/assets/sos.png");
+}
+.currency-flag.currency-flag-srd {
+  background-image: url("/assets/srd.png");
+}
+.currency-flag.currency-flag-std {
+  background-image: url("/assets/std.png");
+}
+.currency-flag.currency-flag-svc {
+  background-image: url("/assets/svc.png");
+}
+.currency-flag.currency-flag-syp {
+  background-image: url("/assets/syp.png");
+}
+.currency-flag.currency-flag-szl {
+  background-image: url("/assets/szl.png");
+}
+.currency-flag.currency-flag-thb {
+  background-image: url("/assets/thb.png");
+}
+.currency-flag.currency-flag-tjs {
+  background-image: url("/assets/tjs.png");
+}
+.currency-flag.currency-flag-tmt {
+  background-image: url("/assets/tmt.png");
+}
+.currency-flag.currency-flag-tnd {
+  background-image: url("/assets/tnd.png");
+}
+.currency-flag.currency-flag-top {
+  background-image: url("/assets/top.png");
+}
+.currency-flag.currency-flag-try {
+  background-image: url("/assets/try.png");
+}
+.currency-flag.currency-flag-ttd {
+  background-image: url("/assets/ttd.png");
+}
+.currency-flag.currency-flag-twd {
+  background-image: url("/assets/twd.png");
+}
+.currency-flag.currency-flag-tzs {
+  background-image: url("/assets/tzs.png");
+}
+.currency-flag.currency-flag-uah {
+  background-image: url("/assets/uah.png");
+}
+.currency-flag.currency-flag-ugx {
+  background-image: url("/assets/ugx.png");
+}
+.currency-flag.currency-flag-usd {
+  background-image: url("/assets/usd.png");
+}
+.currency-flag.currency-flag-uyu {
+  background-image: url("/assets/uyu.png");
+}
+.currency-flag.currency-flag-uzs {
+  background-image: url("/assets/uzs.png");
+}
+.currency-flag.currency-flag-vef {
+  background-image: url("/assets/vef.png");
+}
+.currency-flag.currency-flag-vnd {
+  background-image: url("/assets/vnd.png");
+}
+.currency-flag.currency-flag-vuv {
+  background-image: url("/assets/vuv.png");
+}
+.currency-flag.currency-flag-wst {
+  background-image: url("/assets/wst.png");
+}
+.currency-flag.currency-flag-xaf {
+  background-image: url("/assets/xaf.png");
+}
+.currency-flag.currency-flag-xcd {
+  background-image: url("/assets/xcd.png");
+}
+.currency-flag.currency-flag-xof {
+  background-image: url("/assets/xof.png");
+}
+.currency-flag.currency-flag-xpf {
+  background-image: url("/assets/xpf.png");
+}
+.currency-flag.currency-flag-yer {
+  background-image: url("/assets/yer.png");
+}
+.currency-flag.currency-flag-zar {
+  background-image: url("/assets/zar.png");
+}
+.currency-flag.currency-flag-zmw {
+  background-image: url("/assets/zmw.png");
+}
+
+/* added */
+
+.currency-flag.currency-flag-xau {
+  background-image: url("/assets/xau.png");
+}
+
+.currency-flag.currency-flag-xag {
+  background-image: url("/assets/xag.png");
+}
+
+.currency-flag.currency-flag-btc {
+  background-image: url("/assets/btc.png");
+}
+
+
+
+
+.np-theme-personal .currency-flag.currency-flag-aed {
+  background-image: url("/assets/images/flags/aed.svg");
+}
+.np-theme-personal .currency-flag.currency-flag-afn {
+  border-radius: 50%;
+  background-size: 100% 100%;
+  background-image: url("/assets/afn.png");
+}
+.np-theme-personal .currency-flag.currency-flag-all {
+  border-radius: 50%;
+  background-size: 100% 100%;
+  background-image: url("/assets/all.png");
+}
+.np-theme-personal .currency-flag.currency-flag-amd {
+  border-radius: 50%;
+  background-size: 100% 100%;
+  background-image: url("/assets/amd.png");
+}
+.np-theme-personal .currency-flag.currency-flag-ang {
+  border-radius: 50%;
+  background-size: 100% 100%;
+  background-image: url("/assets/ang.png");
+}
+.np-theme-personal .currency-flag.currency-flag-aoa {
+  border-radius: 50%;
+  background-size: 100% 100%;
+  background-image: url("/assets/aoa.png");
+}
+.np-theme-personal .currency-flag.currency-flag-ars {
+  background-image: url("/assets/images/flags/ars.svg");
+}
+.np-theme-personal .currency-flag.currency-flag-aud {
+  background-image: url("/assets/images/flags/aud.svg");
+}
+.np-theme-personal .currency-flag.currency-flag-awg {
+  border-radius: 50%;
+  background-size: 100% 100%;
+  background-image: url("/assets/awg.png");
+}
+.np-theme-personal .currency-flag.currency-flag-azn {
+  border-radius: 50%;
+  background-size: 100% 100%;
+  background-image: url("/assets/azn.png");
+}
+.np-theme-personal .currency-flag.currency-flag-bam {
+  border-radius: 50%;
+  background-size: 100% 100%;
+  background-image: url("/assets/bam.png");
+}
+.np-theme-personal .currency-flag.currency-flag-bbd {
+  border-radius: 50%;
+  background-size: 100% 100%;
+  background-image: url("/assets/bbd.png");
+}
+.np-theme-personal .currency-flag.currency-flag-bdt {
+  background-image: url("/assets/images/flags/bdt.svg");
+}
+.np-theme-personal .currency-flag.currency-flag-bgn {
+  background-image: url("/assets/images/flags/bgn.svg");
+}
+.np-theme-personal .currency-flag.currency-flag-bhd {
+  background-image: url("/assets/images/flags/bhd.svg");
+}
+.np-theme-personal .currency-flag.currency-flag-bif {
+  border-radius: 50%;
+  background-size: 100% 100%;
+  background-image: url("/assets/bif.png");
+}
+.np-theme-personal .currency-flag.currency-flag-bmd {
+  border-radius: 50%;
+  background-size: 100% 100%;
+  background-image: url("/assets/bmd.png");
+}
+.np-theme-personal .currency-flag.currency-flag-bnd {
+  background-image: url("/assets/images/flags/bnd.svg");
+}
+.np-theme-personal .currency-flag.currency-flag-bob {
+  border-radius: 50%;
+  background-size: 100% 100%;
+  background-image: url("/assets/bob.png");
+}
+.np-theme-personal .currency-flag.currency-flag-brl {
+  background-image: url("/assets/images/flags/brl.svg");
+}
+.np-theme-personal .currency-flag.currency-flag-bsd {
+  border-radius: 50%;
+  background-size: 100% 100%;
+  background-image: url("/assets/bsd.png");
+}
+.np-theme-personal .currency-flag.currency-flag-btn {
+  border-radius: 50%;
+  background-size: 100% 100%;
+  background-image: url("/assets/btn.png");
+}
+.np-theme-personal .currency-flag.currency-flag-bwp {
+  background-image: url("/assets/images/flags/bwp.svg");
+}
+.np-theme-personal .currency-flag.currency-flag-byn {
+  border-radius: 50%;
+  background-size: 100% 100%;
+  background-image: url("/assets/byn.png");
+}
+.np-theme-personal .currency-flag.currency-flag-bzd {
+  border-radius: 50%;
+  background-size: 100% 100%;
+  background-image: url("/assets/bzd.png");
+}
+.np-theme-personal .currency-flag.currency-flag-cad {
+  background-image: url("/assets/images/flags/cad.svg");
+}
+.np-theme-personal .currency-flag.currency-flag-cdf {
+  border-radius: 50%;
+  background-size: 100% 100%;
+  background-image: url("/assets/cdf.png");
+}
+.np-theme-personal .currency-flag.currency-flag-chf {
+  background-image: url("/assets/images/flags/chf.svg");
+}
+.np-theme-personal .currency-flag.currency-flag-clp {
+  background-image: url("/assets/images/flags/clp.svg");
+}
+.np-theme-personal .currency-flag.currency-flag-cny {
+  background-image: url("/assets/images/flags/cny.svg");
+}
+.np-theme-personal .currency-flag.currency-flag-cop {
+  background-image: url("/assets/images/flags/cop.svg");
+}
+.np-theme-personal .currency-flag.currency-flag-crc {
+  background-image: url("/assets/images/flags/crc.svg");
+}
+.np-theme-personal .currency-flag.currency-flag-cup {
+  border-radius: 50%;
+  background-size: 100% 100%;
+  background-image: url("/assets/cup.png");
+}
+.np-theme-personal .currency-flag.currency-flag-cve {
+  border-radius: 50%;
+  background-size: 100% 100%;
+  background-image: url("/assets/cve.png");
+}
+.np-theme-personal .currency-flag.currency-flag-czk {
+  background-image: url("/assets/images/flags/czk.svg");
+}
+.np-theme-personal .currency-flag.currency-flag-djf {
+  border-radius: 50%;
+  background-size: 100% 100%;
+  background-image: url("/assets/djf.png");
+}
+.np-theme-personal .currency-flag.currency-flag-dkk {
+  background-image: url("/assets/images/flags/dkk.svg");
+}
+.np-theme-personal .currency-flag.currency-flag-dop {
+  border-radius: 50%;
+  background-size: 100% 100%;
+  background-image: url("/assets/dop.png");
+}
+.np-theme-personal .currency-flag.currency-flag-dzd {
+  border-radius: 50%;
+  background-size: 100% 100%;
+  background-image: url("/assets/dzd.png");
+}
+.np-theme-personal .currency-flag.currency-flag-egp {
+  background-image: url("/assets/images/flags/egp.svg");
+}
+.np-theme-personal .currency-flag.currency-flag-ern {
+  border-radius: 50%;
+  background-size: 100% 100%;
+  background-image: url("/assets/ern.png");
+}
+.np-theme-personal .currency-flag.currency-flag-etb {
+  border-radius: 50%;
+  background-size: 100% 100%;
+  background-image: url("/assets/etb.png");
+}
+.np-theme-personal .currency-flag.currency-flag-eur {
+  background-image: url("/assets/images/flags/eur.svg");
+}
+.np-theme-personal .currency-flag.currency-flag-fjd {
+  background-image: url("/assets/images/flags/fjd.svg");
+}
+.np-theme-personal .currency-flag.currency-flag-fkp {
+  border-radius: 50%;
+  background-size: 100% 100%;
+  background-image: url("/assets/fkp.png");
+}
+.np-theme-personal .currency-flag.currency-flag-gbp {
+  background-image: url("/assets/images/flags/gbp.svg");
+}
+.np-theme-personal .currency-flag.currency-flag-gel {
+  background-image: url("/assets/images/flags/gel.svg");
+}
+.np-theme-personal .currency-flag.currency-flag-ggp {
+  border-radius: 50%;
+  background-size: 100% 100%;
+  background-image: url("/assets/ggp.png");
+}
+.np-theme-personal .currency-flag.currency-flag-ghs {
+  background-image: url("/assets/images/flags/ghs.svg");
+}
+.np-theme-personal .currency-flag.currency-flag-gip {
+  border-radius: 50%;
+  background-size: 100% 100%;
+  background-image: url("/assets/gip.png");
+}
+.np-theme-personal .currency-flag.currency-flag-gmd {
+  border-radius: 50%;
+  background-size: 100% 100%;
+  background-image: url("/assets/gmd.png");
+}
+.np-theme-personal .currency-flag.currency-flag-gnf {
+  border-radius: 50%;
+  background-size: 100% 100%;
+  background-image: url("/assets/gnf.png");
+}
+.np-theme-personal .currency-flag.currency-flag-gtq {
+  border-radius: 50%;
+  background-size: 100% 100%;
+  background-image: url("/assets/gtq.png");
+}
+.np-theme-personal .currency-flag.currency-flag-gyd {
+  border-radius: 50%;
+  background-size: 100% 100%;
+  background-image: url("/assets/gyd.png");
+}
+.np-theme-personal .currency-flag.currency-flag-hkd {
+  background-image: url("/assets/images/flags/hkd.svg");
+}
+.np-theme-personal .currency-flag.currency-flag-hnl {
+  border-radius: 50%;
+  background-size: 100% 100%;
+  background-image: url("/assets/hnl.png");
+}
+.np-theme-personal .currency-flag.currency-flag-hrk {
+  background-image: url("/assets/images/flags/hrk.svg");
+}
+.np-theme-personal .currency-flag.currency-flag-htg {
+  border-radius: 50%;
+  background-size: 100% 100%;
+  background-image: url("/assets/htg.png");
+}
+.np-theme-personal .currency-flag.currency-flag-huf {
+  background-image: url("/assets/images/flags/huf.svg");
+}
+.np-theme-personal .currency-flag.currency-flag-idr {
+  border-radius: 50%;
+  background-size: 100% 100%;
+  background-image: url("/assets/idr.png");
+}
+.np-theme-personal .currency-flag.currency-flag-ils {
+  background-image: url("/assets/images/flags/ils.svg");
+}
+.np-theme-personal .currency-flag.currency-flag-imp {
+  background-image: url("/assets/images/flags/imp.svg");
+}
+.np-theme-personal .currency-flag.currency-flag-inr {
+  background-image: url("/assets/images/flags/inr.svg");
+}
+.np-theme-personal .currency-flag.currency-flag-iqd {
+  border-radius: 50%;
+  background-size: 100% 100%;
+  background-image: url("/assets/iqd.png");
+}
+.np-theme-personal .currency-flag.currency-flag-irr {
+  border-radius: 50%;
+  background-size: 100% 100%;
+  background-image: url("/assets/irr.png");
+}
+.np-theme-personal .currency-flag.currency-flag-isk {
+  background-image: url("/assets/images/flags/isk.svg");
+}
+.np-theme-personal .currency-flag.currency-flag-jep {
+  border-radius: 50%;
+  background-size: 100% 100%;
+  background-image: url("/assets/jep.png");
+}
+.np-theme-personal .currency-flag.currency-flag-jmd {
+  background-image: url("/assets/images/flags/jmd.svg");
+}
+.np-theme-personal .currency-flag.currency-flag-jod {
+  border-radius: 50%;
+  background-size: 100% 100%;
+  background-image: url("/assets/jod.png");
+}
+.np-theme-personal .currency-flag.currency-flag-jpy {
+  background-image: url("/assets/images/flags/jpy.svg");
+}
+.np-theme-personal .currency-flag.currency-flag-kes {
+  background-image: url("/assets/images/flags/kes.svg");
+}
+.np-theme-personal .currency-flag.currency-flag-kgs {
+  border-radius: 50%;
+  background-size: 100% 100%;
+  background-image: url("/assets/kgs.png");
+}
+.np-theme-personal .currency-flag.currency-flag-khr {
+  border-radius: 50%;
+  background-size: 100% 100%;
+  background-image: url("/assets/khr.png");
+}
+.np-theme-personal .currency-flag.currency-flag-kmf {
+  border-radius: 50%;
+  background-size: 100% 100%;
+  background-image: url("/assets/kmf.png");
+}
+.np-theme-personal .currency-flag.currency-flag-kpw {
+  border-radius: 50%;
+  background-size: 100% 100%;
+  background-image: url("/assets/kpw.png");
+}
+.np-theme-personal .currency-flag.currency-flag-krw {
+  background-image: url("/assets/images/flags/krw.svg");
+}
+.np-theme-personal .currency-flag.currency-flag-kwd {
+  background-image: url("/assets/images/flags/kwd.svg");
+}
+.np-theme-personal .currency-flag.currency-flag-kyd {
+  border-radius: 50%;
+  background-size: 100% 100%;
+  background-image: url("/assets/kyd.png");
+}
+.np-theme-personal .currency-flag.currency-flag-kzt {
+  border-radius: 50%;
+  background-size: 100% 100%;
+  background-image: url("/assets/kzt.png");
+}
+.np-theme-personal .currency-flag.currency-flag-lak {
+  background-image: url("/assets/images/flags/lak.svg");
+}
+.np-theme-personal .currency-flag.currency-flag-lbp {
+  border-radius: 50%;
+  background-size: 100% 100%;
+  background-image: url("/assets/lbp.png");
+}
+.np-theme-personal .currency-flag.currency-flag-lkr {
+  background-image: url("/assets/images/flags/lkr.svg");
+}
+.np-theme-personal .currency-flag.currency-flag-lrd {
+  border-radius: 50%;
+  background-size: 100% 100%;
+  background-image: url("/assets/lrd.png");
+}
+.np-theme-personal .currency-flag.currency-flag-lsl {
+  background-image: url("/assets/images/flags/lsl.svg");
+}
+.np-theme-personal .currency-flag.currency-flag-ltl {
+  border-radius: 50%;
+  background-size: 100% 100%;
+  background-image: url("/assets/ltl.png");
+}
+.np-theme-personal .currency-flag.currency-flag-lyd {
+  border-radius: 50%;
+  background-size: 100% 100%;
+  background-image: url("/assets/lyd.png");
+}
+.np-theme-personal .currency-flag.currency-flag-mad {
+  background-image: url("/assets/images/flags/mad.svg");
+}
+.np-theme-personal .currency-flag.currency-flag-mdl {
+  border-radius: 50%;
+  background-size: 100% 100%;
+  background-image: url("/assets/mdl.png");
+}
+.np-theme-personal .currency-flag.currency-flag-mga {
+  border-radius: 50%;
+  background-size: 100% 100%;
+  background-image: url("/assets/mga.png");
+}
+.np-theme-personal .currency-flag.currency-flag-mkd {
+  border-radius: 50%;
+  background-size: 100% 100%;
+  background-image: url("/assets/mkd.png");
+}
+.np-theme-personal .currency-flag.currency-flag-mmk {
+  border-radius: 50%;
+  background-size: 100% 100%;
+  background-image: url("/assets/mmk.png");
+}
+.np-theme-personal .currency-flag.currency-flag-mnt {
+  border-radius: 50%;
+  background-size: 100% 100%;
+  background-image: url("/assets/mnt.png");
+}
+.np-theme-personal .currency-flag.currency-flag-mop {
+  border-radius: 50%;
+  background-size: 100% 100%;
+  background-image: url("/assets/mop.png");
+}
+.np-theme-personal .currency-flag.currency-flag-mro {
+  border-radius: 50%;
+  background-size: 100% 100%;
+  background-image: url("/assets/mro.png");
+}
+.np-theme-personal .currency-flag.currency-flag-mur {
+  background-image: url("/assets/images/flags/mur.svg");
+}
+.np-theme-personal .currency-flag.currency-flag-mvr {
+  border-radius: 50%;
+  background-size: 100% 100%;
+  background-image: url("/assets/mvr.png");
+}
+.np-theme-personal .currency-flag.currency-flag-mwk {
+  border-radius: 50%;
+  background-size: 100% 100%;
+  background-image: url("/assets/mwk.png");
+}
+.np-theme-personal .currency-flag.currency-flag-mxn {
+  background-image: url("/assets/images/flags/mxn.svg");
+}
+.np-theme-personal .currency-flag.currency-flag-myr {
+  background-image: url("/assets/images/flags/myr.svg");
+}
+.np-theme-personal .currency-flag.currency-flag-mzn {
+  background-image: url("/assets/images/flags/mzn.svg");
+}
+.np-theme-personal .currency-flag.currency-flag-nad {
+  background-image: url("/assets/images/flags/nad.svg");
+}
+.np-theme-personal .currency-flag.currency-flag-ngn {
+  background-image: url("/assets/images/flags/ngn.svg");
+}
+.np-theme-personal .currency-flag.currency-flag-nio {
+  border-radius: 50%;
+  background-size: 100% 100%;
+  background-image: url("/assets/nio.png");
+}
+.np-theme-personal .currency-flag.currency-flag-nok {
+  background-image: url("/assets/images/flags/nok.svg");
+}
+.np-theme-personal .currency-flag.currency-flag-npr {
+  background-image: url("/assets/images/flags/npr.svg");
+}
+.np-theme-personal .currency-flag.currency-flag-nzd {
+  background-image: url("/assets/images/flags/nzd.svg");
+}
+.np-theme-personal .currency-flag.currency-flag-omr {
+  background-image: url("/assets/images/flags/omr.svg");
+}
+.np-theme-personal .currency-flag.currency-flag-pab {
+  background-image: url("/assets/images/flags/pab.svg");
+}
+.np-theme-personal .currency-flag.currency-flag-pen {
+  background-image: url("/assets/images/flags/pen.svg");
+}
+.np-theme-personal .currency-flag.currency-flag-pgk {
+  border-radius: 50%;
+  background-size: 100% 100%;
+  background-image: url("/assets/pgk.png");
+}
+.np-theme-personal .currency-flag.currency-flag-php {
+  background-image: url("/assets/images/flags/php.svg");
+}
+.np-theme-personal .currency-flag.currency-flag-pkr {
+  background-image: url("/assets/images/flags/pkr.svg");
+}
+.np-theme-personal .currency-flag.currency-flag-pln {
+  background-image: url("/assets/images/flags/pln.svg");
+}
+.np-theme-personal .currency-flag.currency-flag-pyg {
+  border-radius: 50%;
+  background-size: 100% 100%;
+  background-image: url("/assets/pyg.png");
+}
+.np-theme-personal .currency-flag.currency-flag-qar {
+  background-image: url("/assets/images/flags/qar.svg");
+}
+.np-theme-personal .currency-flag.currency-flag-ron {
+  background-image: url("/assets/images/flags/ron.svg");
+}
+.np-theme-personal .currency-flag.currency-flag-rsd {
+  border-radius: 50%;
+  background-size: 100% 100%;
+  background-image: url("/assets/rsd.png");
+}
+.np-theme-personal .currency-flag.currency-flag-rub {
+  background-image: url("/assets/images/flags/rub.svg");
+}
+.np-theme-personal .currency-flag.currency-flag-rwf {
+  border-radius: 50%;
+  background-size: 100% 100%;
+  background-image: url("/assets/rwf.png");
+}
+.np-theme-personal .currency-flag.currency-flag-sar {
+  background-image: url("/assets/images/flags/sar.svg");
+}
+.np-theme-personal .currency-flag.currency-flag-sbd {
+  border-radius: 50%;
+  background-size: 100% 100%;
+  background-image: url("/assets/sbd.png");
+}
+.np-theme-personal .currency-flag.currency-flag-scr {
+  border-radius: 50%;
+  background-size: 100% 100%;
+  background-image: url("/assets/scr.png");
+}
+.np-theme-personal .currency-flag.currency-flag-sek {
+  background-image: url("/assets/images/flags/sek.svg");
+}
+.np-theme-personal .currency-flag.currency-flag-sgd {
+  background-image: url("/assets/images/flags/sgd.svg");
+}
+.np-theme-personal .currency-flag.currency-flag-shp {
+  border-radius: 50%;
+  background-size: 100% 100%;
+  background-image: url("/assets/shp.png");
+}
+.np-theme-personal .currency-flag.currency-flag-sll {
+  border-radius: 50%;
+  background-size: 100% 100%;
+  background-image: url("/assets/sll.png");
+}
+.np-theme-personal .currency-flag.currency-flag-sle {
+  border-radius: 50%;
+  background-size: 100% 100%;
+  background-image: url("/assets/sll.png");
+}
+.np-theme-personal .currency-flag.currency-flag-sos {
+  border-radius: 50%;
+  background-size: 100% 100%;
+  background-image: url("/assets/sos.png");
+}
+.np-theme-personal .currency-flag.currency-flag-srd {
+  border-radius: 50%;
+  background-size: 100% 100%;
+  background-image: url("/assets/srd.png");
+}
+.np-theme-personal .currency-flag.currency-flag-std {
+  border-radius: 50%;
+  background-size: 100% 100%;
+  background-image: url("/assets/std.png");
+}
+.np-theme-personal .currency-flag.currency-flag-svc {
+  border-radius: 50%;
+  background-size: 100% 100%;
+  background-image: url("/assets/svc.png");
+}
+.np-theme-personal .currency-flag.currency-flag-syp {
+  border-radius: 50%;
+  background-size: 100% 100%;
+  background-image: url("/assets/syp.png");
+}
+.np-theme-personal .currency-flag.currency-flag-szl {
+  border-radius: 50%;
+  background-size: 100% 100%;
+  background-image: url("/assets/szl.png");
+}
+.np-theme-personal .currency-flag.currency-flag-thb {
+  background-image: url("/assets/images/flags/thb.svg");
+}
+.np-theme-personal .currency-flag.currency-flag-tjs {
+  border-radius: 50%;
+  background-size: 100% 100%;
+  background-image: url("/assets/tjs.png");
+}
+.np-theme-personal .currency-flag.currency-flag-tmt {
+  background-image: url("/assets/images/flags/tmt.svg");
+}
+.np-theme-personal .currency-flag.currency-flag-tnd {
+  border-radius: 50%;
+  background-size: 100% 100%;
+  background-image: url("/assets/tnd.png");
+}
+.np-theme-personal .currency-flag.currency-flag-top {
+  border-radius: 50%;
+  background-size: 100% 100%;
+  background-image: url("/assets/top.png");
+}
+.np-theme-personal .currency-flag.currency-flag-try {
+  background-image: url("/assets/images/flags/try.svg");
+}
+.np-theme-personal .currency-flag.currency-flag-ttd {
+  border-radius: 50%;
+  background-size: 100% 100%;
+  background-image: url("/assets/ttd.png");
+}
+.np-theme-personal .currency-flag.currency-flag-twd {
+  background-image: url("/assets/images/flags/twd.svg");
+}
+.np-theme-personal .currency-flag.currency-flag-tzs {
+  background-image: url("/assets/images/flags/tzs.svg");
+}
+.np-theme-personal .currency-flag.currency-flag-uah {
+  background-image: url("/assets/images/flags/uah.svg");
+}
+.np-theme-personal .currency-flag.currency-flag-ugx {
+  background-image: url("/assets/images/flags/ugx.svg");
+}
+.np-theme-personal .currency-flag.currency-flag-usd {
+  background-image: url("/assets/images/flags/usd.svg");
+}
+.np-theme-personal .currency-flag.currency-flag-uyu {
+  background-image: url("/assets/images/flags/uyu.svg");
+}
+.np-theme-personal .currency-flag.currency-flag-uzs {
+  border-radius: 50%;
+  background-size: 100% 100%;
+  background-image: url("/assets/uzs.png");
+}
+.np-theme-personal .currency-flag.currency-flag-vef {
+  border-radius: 50%;
+  background-size: 100% 100%;
+  background-image: url("/assets/vef.png");
+}
+.np-theme-personal .currency-flag.currency-flag-vnd {
+  background-image: url("/assets/images/flags/vnd.svg");
+}
+.np-theme-personal .currency-flag.currency-flag-vuv {
+  border-radius: 50%;
+  background-size: 100% 100%;
+  background-image: url("/assets/vuv.png");
+}
+.np-theme-personal .currency-flag.currency-flag-wst {
+  border-radius: 50%;
+  background-size: 100% 100%;
+  background-image: url("/assets/wst.png");
+}
+.np-theme-personal .currency-flag.currency-flag-xaf {
+  border-radius: 50%;
+  background-size: 100% 100%;
+  background-image: url("/assets/xaf.png");
+}
+.np-theme-personal .currency-flag.currency-flag-xcd {
+  border-radius: 50%;
+  background-size: 100% 100%;
+  background-image: url("/assets/xcd.png");
+}
+.np-theme-personal .currency-flag.currency-flag-xof {
+  background-image: url("/assets/images/flags/xof.svg");
+}
+.np-theme-personal .currency-flag.currency-flag-xpf {
+  border-radius: 50%;
+  background-size: 100% 100%;
+  background-image: url("/assets/xpf.png");
+}
+.np-theme-personal .currency-flag.currency-flag-yer {
+  border-radius: 50%;
+  background-size: 100% 100%;
+  background-image: url("/assets/yer.png");
+}
+.np-theme-personal .currency-flag.currency-flag-zar {
+  background-image: url("/assets/images/flags/zar.svg");
+}
+.np-theme-personal .currency-flag.currency-flag-zmw {
+  background-image: url("/assets/images/flags/zmw.svg");
+}

@@ -1,0 +1,29 @@
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+	<div class="btn-toolbar mb-2 mb-md-0">
+	<div class="btn-group me-2">
+      <%= link_to({:controller => 'admin', :action => 'index'}) do %>
+      <button type="button" class="btn btn-sm btn-outline-secondary menu">Back</button>
+      <% end %>
+  </div>
+</div>
+</div>
+
+<div class="card text-center shadow p-3 mb-5 bg-white rounded">
+  <div class="card-body ">
+    <div class="d-flex justify-content-center">
+      <div class="field form-group">
+      	<%= form_with scope: "params", url: admin_save_config_path, local: true, data: { turbo: false }, method: :post do |form| %>
+      	<div class="field form-group">
+      		<%= form.text_field :url, class:"form-control", placeholder: @config.url, value: @config.url %>
+      	</div>
+				<div class="field form-group">
+					<%= form.text_field :apikey, class:"form-control", placeholder: @config.apikey, value: @config.apikey %>
+				</div>
+				<div>
+					<%= form.submit "Update" %>
+				</div>
+				<% end %>
+      </div>
+    </div>
+  </div>
+</div>
