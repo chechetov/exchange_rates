@@ -11,6 +11,10 @@ module ExchangeRates
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 7.0
 
+    begin
+      config.web_console.whitelisted_ips = '192.168.0.0/16'
+    rescue NoMethodError
+    end
     # Configuration for the application, engines, and railties goes here.
     #
     # These settings can be overridden in specific environments using the files

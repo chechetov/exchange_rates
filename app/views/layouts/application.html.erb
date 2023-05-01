@@ -1,16 +1,33 @@
 <!DOCTYPE html>
-<html>
+<html class="full-height">
   <head>
-    <title>ExchangeRates</title>
+    <title>Exchange</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
   </head>
 
-  <body>
-    <%= yield %>
+  <body class="full-height fullwidth">
+    <%= render 'home/header' %>
+    <div class="container-fluid full-height">
+      <div class="row full-height">
+        <%= render 'home/sidebar' %>
+        <main class="col-md-10">
+          <% if notice %>
+          <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3">
+            <p class="alert alert-success"><%= notice %></p>
+          </div>
+          <% end %>
+          <% if alert %>
+          <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3">
+            <p class="alert alert-danger"><%= alert %></p>
+          </div>
+          <% end %>
+          <%= yield %>
+        </main>
+      </div>
+    </div>
   </body>
 </html>

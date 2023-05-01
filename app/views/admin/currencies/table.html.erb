@@ -1,0 +1,48 @@
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+  <div class="btn-toolbar mb-2 mb-md-0">
+    <div class="btn-group me-2">
+      <%= link_to({:controller => 'rates', :action => 'convert'}) do %>
+      <button type="button" class="btn btn-sm btn-outline-secondary menu">Back</button>
+      <% end %>
+      <% if params[:action] == "get_currencies" %>
+			<%= link_to({:controller => 'admin', :action => 'save_currencies'}) do %>
+			<button type="button" class="btn btn-sm btn-success menu">Save</button>
+			<% end %>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid">
+	<% if params[:action] == "list_currencies" %>
+	<h5> Listing currencies in database </h5>
+	<% else %>
+	<h5> Listing currencies from api: </h5>
+	<% end %>
+
+	<div class="scrollit" style="overflow: scroll;height: 700px;">
+		<table class="table table-bordered table-striped mb-0" >
+		  <thead>
+		    <tr>
+		      <th scope="col">Code</th>
+		      <th scope="col">Description</th>
+		    </tr>
+		  </thead>
+		  <tbody>
+		  	<% @currencies.each do |currency| %>
+		  	<% if params[:action] == "get_currencies" %>
+		  	<tr>
+		  		<td> <%= currency[0] %> </td>
+		  		<td> <%= currency[1] %> </td>
+		  	</tr>
+		  	<% else %>
+		  	<tr>
+		  		<td> <%= currency.code %> </td>
+		  		<td> <%= currency.desc %> </td>
+		  	</tr>
+		  	<% end %>
+			<% end %>
+		  </tbody>
+		</table>
+	</div>
+</div>

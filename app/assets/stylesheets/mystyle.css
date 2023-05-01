@@ -1,0 +1,205 @@
+.pad3px {
+  padding: 3px 3px !important;
+}
+
+.pad3px-left{
+  padding-left: 3px !important;
+}
+
+.pad3px-top{
+  padding-top:5px !important;
+}
+
+.btnhover{
+  background-color: #5c83bd;
+  color: white;
+}
+
+.pad8px-top{
+  padding-top: 10px !important;
+}
+
+.bg-blue-mine {
+  background-color: rgb(21,76,121);
+}
+.datepicker{
+  overflow: hidden;
+  width: 220px;
+  height: 240px;
+  position: inherit;
+  /* left: 300px !important; */
+}
+
+.datepicker.table-condensed {
+    width: 200px;
+    height: 220px;
+    font-size: x-small; 
+}
+
+.convert-result{
+   vertical-align: top;
+  width: 100%;
+}
+
+.resultrow{
+  display: flex;
+}
+
+.resultrow.from {
+  width:42px;
+  height: 32x;
+}
+.resultrow.to {
+   width:42px;
+   height: 32px;
+}
+.resultrow.date { 
+  width:30px;
+  height: 20px;
+}
+
+.centering {
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+}
+
+.hover-overlay:hover {
+  color: #2455a3;
+  transform: scale(1.02);
+  box-shadow: 0 3px 3px rgba(0,0,0,.12), 0 2px 4px rgba(0,0,0,.06);
+}
+
+.link-grey{
+  color: #46618c;
+}
+
+.w-40{
+  width: 40%;
+}
+
+.fullwidth{
+  width: 100%;
+  white-space: nowrap;
+}
+
+.fitwidth{
+  table-layout:fixed;
+}
+
+.fitwidth td {
+  overflow: hidden; 
+  text-overflow: ellipsis; 
+  word-wrap: break-word;
+}
+
+.sidebar.collapse {
+  height: 100%;
+  width: fit-content;
+}
+
+.sidebar.show{
+  width: 100%;
+  height: fit-content;
+}
+
+.left_25{
+  left: -25%;
+}
+
+.top_7{
+  position: relative;
+  top: -7%;
+}
+
+.seriesbody {
+  text-align:center;
+  display: grid;
+  grid-template-columns: repeat(2, 0.15fr);
+  grid-template-rows: 0.3fr 0.5fr; 
+  grid-column-gap: 0px;
+  grid-row-gap: 0px; 
+}
+
+.seriesbodydiv1 {  
+  width:100px;
+  grid-area: 1 / 1 / 2 / 2; 
+}
+
+.seriesbodydiv2 {
+  width:300%;
+  grid-area: 1 / 2 / 2 / 3; 
+}
+
+.seriesbodydiv3 { 
+  padding: 8px;
+  grid-area: 2 / 1 / 3 / 3;
+}
+
+.mydatepicker{
+  width:100%;
+}
+
+.nopadding{
+  padding: 5 5 5 5;
+}
+
+.bd-placeholder-img {
+  font-size: 1.125rem;
+  text-anchor: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+@media (min-width: 768px) {
+  .bd-placeholder-img-lg {
+    font-size: 3.5rem;
+  }
+}
+
+.b-example-divider {
+  height: 3rem;
+  background-color: rgba(0, 0, 0, .1);
+  border: solid rgba(0, 0, 0, .15);
+  border-width: 1px 0;
+  box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+}
+
+.b-example-vr {
+  flex-shrink: 0;
+  width: 1.5rem;
+  height: 100vh;
+}
+
+.bi {
+  vertical-align: -.125em;
+  fill: currentColor;
+}
+
+.full-height {
+  height: 100%;
+}
+
+.nav-scroller {
+  position: relative;
+  z-index: 2;
+  height: 2.75rem;
+  overflow-y: hidden;
+}
+
+.nav-scroller .nav {
+  display: flex;
+  flex-wrap: nowrap;
+  padding-bottom: 1rem;
+  margin-top: -1px;
+  overflow-x: auto;
+  text-align: center;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+}
+
+.menu {
+  margin: 10px 5px 10px 5px;
+}
