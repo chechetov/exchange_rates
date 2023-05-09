@@ -84,6 +84,7 @@ class QueryController < ApplicationController
       response = https.request(request)
       ret = response.read_body
     rescue StandardError => e
+      Rails.logger.debug "Request exception: #{e.backtrace}"
       ret = { "success": false }.to_json
     end
       p ret
