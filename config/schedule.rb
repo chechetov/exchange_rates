@@ -25,10 +25,10 @@ env :GEM_PATH, ENV['GEM_PATH']
 set :output, { :error => "log/error.log", :standard => 'log/cron.log' }
 
 every 1.day do
-   runner "Task.new.get_latest"
+#   runner "Task.new.get_latest"
    runner "puts 'Cron done!'"
 end
 
-every 5.minute do
+every 1.day do
    runner "puts 'Cron test!'"
 end

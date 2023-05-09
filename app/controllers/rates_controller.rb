@@ -23,12 +23,14 @@ def convert_amount
   p form_params
 
   if queries.validator( {:params => form_params, :method => "convert_amount"} )
+    Rails.logger.debug "Validator passed"
     @response = JSON.parse(queries.convert_amount(form_params))
+    Rails.logger.debug "Response #{@response}"
   else
     @response = { "success" => false }
   end
   
-  p @response
+  Rails.logger.debug "Response: #{@response}"
   render 'rates/convert_result'
 end
 
