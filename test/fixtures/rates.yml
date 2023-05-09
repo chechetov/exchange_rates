@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date: 2022-12-21
+  rate: 9.99
+  from_id: 1
+  to_id: 1
+
+two:
+  date: 2022-12-21
+  rate: 9.99
+  from_id: 1
+  to_id: 1

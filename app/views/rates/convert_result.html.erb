@@ -22,6 +22,8 @@
           <p> <%= text %> </p>
       <% else %>
         <p> Error occurred, response was not successful </p>
+        <p> res: </p>
+	<%= p @response %>
       <% end %>
     </div>
   </div>

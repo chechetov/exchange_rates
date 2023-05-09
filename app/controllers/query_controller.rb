@@ -1,6 +1,6 @@
 class QueryController < ApplicationController
 
-  # API calls to fixer
+ # API calls to fixer
   
   require "uri"
   require "net/http"
@@ -15,6 +15,7 @@ class QueryController < ApplicationController
 
   def validator(params)
     # Validates differrent conditions for request params
+    Rails.logger.debug "Validator Params: #{params}"
     if params[:method] == "convert_amount"
       params = params[:params]
       if params[:date] == "" or params[:date] == nil
@@ -25,6 +26,8 @@ class QueryController < ApplicationController
         date = Date.parse(params[:date])
       end
 
+      Rails.logger.debug "Validator date : #{date}"
+
       # Conditions
       currency_from = Currency.where(:code => params[:from]).exists?
       currency_to = Currency.where(:code => params[:to]).exists?
@@ -32,8 +35,10 @@ class QueryController < ApplicationController
       date_not_future = Date.today - date >= 0 ? true : false
 
       if currency_from && currency_to && amount_positive && date_not_future
+	Rails.logger.debug "True"
         return true
       else
+	Rails.logger.debug "False"
         return false
       end
 
@@ -84,8 +89,8 @@ class QueryController < ApplicationController
       p ret
     return ret
   end
-
-	def convert_amount_external(params)
+  
+  def convert_amount_external(params)
     # Converts amount using Fixer API calculation
     # Not used
     tail = "/convert?to=#{params[:to]}&from=#{params[:from]}&amount=#{params[:amount]}"
@@ -111,8 +116,8 @@ class QueryController < ApplicationController
     rate_in_db = @db.check_rate(params)
 
     if rate_in_db
-      ret = { params[:to] => rate_in_db }
-      return { params[:to] => rate_in_db }
+      rate = { params[:to] => rate_in_db }
+      return { :success => true, :rates => rate }
     else
       if params[:date] == Date.today
         puts("latest!")
@@ -125,14 +130,19 @@ class QueryController < ApplicationController
         resp = generic_request(tail)
       end
       resp = JSON.parse(resp)
-      if resp["success"]
-        puts("Success")
+      Rails.logger.debug "get_rate_at_date() -> resp: #{resp}"
+      if resp["success"] == true
         rates = resp["rates"]
         @db.save_rates(param = {:date=>params[:date], :from=>params[:from], :rates => rates })
-        return rates
+        return { :success => true, :rates => rates } 
       else
-        puts("False")
-        return {}
+	ret = {}
+        if resp["message"]
+	  ret = { :success => false, :rates => {}, :message => resp["message"] }
+	else
+          ret = { :success => false, :rates => {}, :message => "none" }
+	end
+	return ret
       end
     end
   end
@@ -140,9 +150,12 @@ class QueryController < ApplicationController
   def convert_amount(params)
     # Converts amount using params
 
-    rates = get_rate_at_date(params)
+    resp = get_rate_at_date(params)
  
-    if rates != {}     
+    Rails.logger.debug "convert_amount() resp: #{resp}"
+
+    if resp[:success] == true
+      rates = resp[:rates]     
       to   = params[:to]
       rate = rates["#{to}"]
 
@@ -156,8 +169,9 @@ class QueryController < ApplicationController
         "result" => params[:amount].to_f * rate
       }.to_json
    else
-      response = { "success" => false }.to_json
+      response = { "success" => false, "message" => resp[:message] }.to_json
    end
+   Rails.logger.debug "convert_amount() -> last_resp: #{response}"
 
    return response   
   end
