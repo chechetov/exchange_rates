@@ -80,7 +80,7 @@ class QueryController < ApplicationController
     begin
       request = Net::HTTP::Get.new(url)
       request['apikey'] = @apikey
-      Rails.logger.debug "Request OUT: #{request.inspect}"
+      Rails.logger.debug "Request OUT: #{pp request}"
       response = https.request(request)
       ret = response.read_body
     rescue StandardError => e
