@@ -75,7 +75,7 @@ class QueryController < ApplicationController
     tail, params = *args
     url = URI(@url + tail)
     https = Net::HTTP.new(url.host, url.port);
-    https.set_debug_output(Rails.logger.debug)
+    https.set_debug_output($stderr)
     https.use_ssl = true
     puts("Url: " + url.to_s)
     begin
