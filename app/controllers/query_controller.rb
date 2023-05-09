@@ -1,7 +1,6 @@
 class QueryController < ApplicationController
+  # API calls to fixer
 
- # API calls to fixer
-  
   require "uri"
   require "net/http"
   require "json"
@@ -35,10 +34,10 @@ class QueryController < ApplicationController
       date_not_future = Date.today - date >= 0 ? true : false
 
       if currency_from && currency_to && amount_positive && date_not_future
-	Rails.logger.debug "True"
+        Rails.logger.debug "True"
         return true
       else
-	Rails.logger.debug "False"
+        Rails.logger.debug "False"
         return false
       end
 
@@ -66,9 +65,9 @@ class QueryController < ApplicationController
         return false
       end
       # If no method
-      else
-        return false
-      end
+    else
+      return false
+    end
   end
 
   def generic_request(*args)
@@ -81,16 +80,17 @@ class QueryController < ApplicationController
     begin
       request = Net::HTTP::Get.new(url)
       request['apikey'] = @apikey
+      Rails.logger.debug "Request OUT: #{request}"
       response = https.request(request)
       ret = response.read_body
     rescue StandardError => e
       Rails.logger.debug "Request exception: #{e.backtrace}"
       ret = { "success": false }.to_json
     end
-      p ret
+    p ret
     return ret
   end
-  
+
   def convert_amount_external(params)
     # Converts amount using Fixer API calculation
     # Not used
@@ -104,137 +104,137 @@ class QueryController < ApplicationController
     puts("get_latest_daily")
     currencies = @db.get_currencies
     for currency in currencies do
-      rate = get_rate_at_date(params = { :date => "", :from => currency })
-    end
-  end
-
-  def get_rate_at_date(params)
-    # Checks if there is a rate in db
-    # If not
-    # Makes calls to Fixer Api to get rate at a date or latest
-    # Saves retrieved rates
-
-    rate_in_db = @db.check_rate(params)
-
-    if rate_in_db
-      rate = { params[:to] => rate_in_db }
-      return { :success => true, :rates => rate }
-    else
-      if params[:date] == Date.today
-        puts("latest!")
-        tail = "/latest?base=#{params[:from]}"
-        resp = generic_request(tail)
-      else
-        puts("Getting rate for " + params[:date])
-        date = Date.parse(params[:date]).strftime("%Y-%m-%d")        
-        tail = "/#{date}?base=#{params[:from]}"
-        resp = generic_request(tail)
-      end
-      resp = JSON.parse(resp)
-      Rails.logger.debug "get_rate_at_date() -> resp: #{resp}"
-      if resp["success"] == true
-        rates = resp["rates"]
-        @db.save_rates(param = {:date=>params[:date], :from=>params[:from], :rates => rates })
-        return { :success => true, :rates => rates } 
-      else
-	ret = {}
-        if resp["message"]
-	  ret = { :success => false, :rates => {}, :message => resp["message"] }
-	else
-          ret = { :success => false, :rates => {}, :message => "none" }
-	end
-	return ret
+        rate = get_rate_at_date(params = { :date => "", :from => currency })
       end
     end
-  end
 
-  def convert_amount(params)
-    # Converts amount using params
+    def get_rate_at_date(params)
+      # Checks if there is a rate in db
+      # If not
+      # Makes calls to Fixer Api to get rate at a date or latest
+      # Saves retrieved rates
 
-    resp = get_rate_at_date(params)
- 
-    Rails.logger.debug "convert_amount() resp: #{resp}"
+      rate_in_db = @db.check_rate(params)
 
-    if resp[:success] == true
-      rates = resp[:rates]     
-      to   = params[:to]
-      rate = rates["#{to}"]
-
-      response = {
-        "success" => true,
-        "from" => params[:from],
-        "to"   => params[:to],
-        "date" => params[:date],
-        "rate" => rate,
-        "amount" => params[:amount].to_f,
-        "result" => params[:amount].to_f * rate
-      }.to_json
-   else
-      response = { "success" => false, "message" => resp[:message] }.to_json
-   end
-   Rails.logger.debug "convert_amount() -> last_resp: #{response}"
-
-   return response   
-  end
-
-  def series(params)
-    # get series from db
-    # if does not exist - request
-    # and save
-
-    # query from db
-    days = Date.parse(params[:to_date]).mjd - Date.parse(params[:start_date]).mjd + 1
-    series = @db.get_series(params)
-
-    # Full data in db
-    if series.length == days
-      puts("full data in db")
-      puts(series.length.to_s + " values for " + days.to_s + " days")
-
-      response = {
-        "success" => true,
-        "from" => params[:from],
-        "to" => params[:to],
-        "start_date" => params[:start_date],
-        "to_date" => params[:to_date],
-        "series" => series
-      }
-      return response
-    else
-      # No data in db
-      puts("no full data in db")
-      puts(series.length.to_s + " values for " + days.to_s + " days")
-
-      start_date = Date.parse(params[:start_date]).strftime("%Y-%m-%d")
-      to_date = Date.parse(params[:to_date]).strftime("%Y-%m-%d")
-
-      # do api request
-
-      tail="/timeseries?start_date=#{start_date}&end_date=#{to_date}&base=#{params[:from]}"
-
-      resp = generic_request(tail, params)
-      resp = JSON.parse(resp)
-
-      if resp["success"]
-        puts("Success")
-        rates = resp["rates"]
-        rates.each do | date, rates|
-          param = {:date => date, :from => params[:from], :rates => rates}
-          puts ("Saving rates for: " + param[:date].to_s + " " + param[:from].to_s)
-          @db.save_rates(param)
+      if rate_in_db
+        rate = { params[:to] => rate_in_db }
+        return { :success => true, :rates => rate }
+      else
+        if params[:date] == Date.today
+          puts("latest!")
+          tail = "/latest?base=#{params[:from]}"
+          resp = generic_request(tail)
+        else
+          puts("Getting rate for " + params[:date])
+          date = Date.parse(params[:date]).strftime("%Y-%m-%d")
+          tail = "/#{date}?base=#{params[:from]}"
+          resp = generic_request(tail)
         end
-      resp = series(params)
-      else
-        puts("False")
-        resp = { "success" => false }.to_json
+        resp = JSON.parse(resp)
+        Rails.logger.debug "get_rate_at_date() -> resp: #{resp}"
+        if resp["success"] == true
+          rates = resp["rates"]
+          @db.save_rates(param = {:date=>params[:date], :from=>params[:from], :rates => rates })
+          return { :success => true, :rates => rates }
+        else
+          ret = {}
+          if resp["message"]
+            ret = { :success => false, :rates => {}, :message => resp["message"] }
+          else
+            ret = { :success => false, :rates => {}, :message => "none" }
+          end
+          return ret
+        end
       end
-      return resp
     end
-  end
 
-  def get_all_currencies
-    tail = "/symbols"
-    return generic_request(tail)
-  end
+    def convert_amount(params)
+      # Converts amount using params
 
-end
+      resp = get_rate_at_date(params)
+
+      Rails.logger.debug "convert_amount() resp: #{resp}"
+
+      if resp[:success] == true
+        rates = resp[:rates]
+        to   = params[:to]
+        rate = rates["#{to}"]
+
+        response = {
+          "success" => true,
+          "from" => params[:from],
+          "to"   => params[:to],
+          "date" => params[:date],
+          "rate" => rate,
+          "amount" => params[:amount].to_f,
+          "result" => params[:amount].to_f * rate
+        }.to_json
+      else
+        response = { "success" => false, "message" => resp[:message] }.to_json
+      end
+      Rails.logger.debug "convert_amount() -> last_resp: #{response}"
+
+      return response
+    end
+
+    def series(params)
+      # get series from db
+      # if does not exist - request
+      # and save
+
+      # query from db
+      days = Date.parse(params[:to_date]).mjd - Date.parse(params[:start_date]).mjd + 1
+      series = @db.get_series(params)
+
+      # Full data in db
+      if series.length == days
+        puts("full data in db")
+        puts(series.length.to_s + " values for " + days.to_s + " days")
+
+        response = {
+          "success" => true,
+          "from" => params[:from],
+          "to" => params[:to],
+          "start_date" => params[:start_date],
+          "to_date" => params[:to_date],
+          "series" => series
+        }
+        return response
+      else
+        # No data in db
+        puts("no full data in db")
+        puts(series.length.to_s + " values for " + days.to_s + " days")
+
+        start_date = Date.parse(params[:start_date]).strftime("%Y-%m-%d")
+        to_date = Date.parse(params[:to_date]).strftime("%Y-%m-%d")
+
+        # do api request
+
+        tail="/timeseries?start_date=#{start_date}&end_date=#{to_date}&base=#{params[:from]}"
+
+        resp = generic_request(tail, params)
+        resp = JSON.parse(resp)
+
+        if resp["success"]
+          puts("Success")
+          rates = resp["rates"]
+          rates.each do | date, rates|
+            param = {:date => date, :from => params[:from], :rates => rates}
+            puts ("Saving rates for: " + param[:date].to_s + " " + param[:from].to_s)
+            @db.save_rates(param)
+          end
+          resp = series(params)
+        else
+          puts("False")
+          resp = { "success" => false }.to_json
+        end
+        return resp
+      end
+    end
+
+    def get_all_currencies
+      tail = "/symbols"
+      return generic_request(tail)
+    end
+
+  end
