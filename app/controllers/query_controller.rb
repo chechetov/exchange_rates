@@ -75,17 +75,12 @@ class QueryController < ApplicationController
     tail, params = *args
     url = URI(@url + tail)
     https = Net::HTTP.new(url.host, url.port);
+    https.set_debug_output(Rails.logger.debug)
     https.use_ssl = true
     puts("Url: " + url.to_s)
     begin
       request = Net::HTTP::Get.new(url)
       request['apikey'] = @apikey
-      
-      request_debug = pp request
-      Rails.logger.debug "Request OUT: #{request_debug}"
-      Rails.logger.debug pp request
-      pp request
-
       response = https.request(request)
       ret = response.read_body
     rescue StandardError => e
